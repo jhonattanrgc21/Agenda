@@ -1,0 +1,109 @@
+/* General */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif, Arial, Helvetica;
+  background: #339668;
+}
+
+/* Limpiando el float */
+.clearFix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+input:focus {
+  border: 1px solid #1668C4;
+}
+
+.container {
+  background: white;
+  margin: 30px auto;
+  height: 100%;
+  max-height: 1000px;
+  max-width: 1000px;
+  padding: 10px 20px;
+  width: 50%;
+  text-align: center;
+}
+.container main {
+  margin: 20px 0;
+}
+.container main form {
+  border: 1px solid #ccc;
+  margin: 20px auto;
+  padding: 10px 20px;
+  width: 60%;
+}
+.container main form .campo {
+  padding: 15px 20px;
+  text-align: center;
+}
+.container main form .campo label {
+  font-size: 1.1em;
+}
+.container main form .campo input {
+  padding: 7px 15px;
+  border: 1px solid #ccc;
+  margin-left: 5px;
+}
+.container main form button[type=submit] {
+  background: #1668C4;
+  color: white;
+  max-width: 1000px;
+  margin: 10px 0;
+  padding: 7px 15px;
+  width: 30%;
+  border: none;
+}
+.container main form button[type=submit]:hover {
+  background: #4A88F4;
+  cursor: pointer;
+}
+.container main table {
+  background: #e4f54c;
+  margin: 30px auto;
+  width: 80%;
+}
+.container main table thead tr th {
+  font-size: 16px;
+  padding: 10px 15px;
+}
+.container main table tbody tr td {
+  text-align: center;
+  padding: 10px 10px;
+  font-size: 14px;
+}
+.container main table tbody tr:nth-child(odd) {
+  background: white;
+}
+.container button {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  padding: 8px 10px;
+}
+.container .editar {
+  background: #399e39;
+}
+.container .editar:hover {
+  background: green;
+}
+.container .eliminar:hover {
+  background: red;
+}
+.container .eliminar {
+  background: #ec3e3e;
+}
+
+/*# sourceMappingURL=style.css.map */

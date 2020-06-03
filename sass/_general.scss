@@ -1,0 +1,26 @@
+/* General */
+html{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif, Arial, Helvetica;
+    background: $turquesa;
+}
+
+/* Limpiando el float */
+.clearFix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+input:focus{
+    border: 1px solid $azul;
+}

@@ -1,0 +1,98 @@
+// Contenido principal
+.container{
+    background: white;
+    margin: 30px auto;
+    height: 100%;
+    max-height: 1000px;
+    max-width: 1000px;
+    padding: 10px 20px;
+    width: 50%;
+    text-align: center;
+
+    main{
+        margin:20px 0;
+        form{
+            border: 1px solid $gris;
+            margin: 20px auto;
+            padding: 10px 20px;
+            width: 60%;
+            .campo{
+                padding: 15px 20px;
+                text-align: center;
+    
+                label{
+                    font-size: 1.1em;;
+                }
+    
+                input{
+                    padding: 7px 15px;
+                    border: 1px solid $gris;
+                    margin-left: 5px;
+                }
+            }
+    
+            // Boton de envio
+            button[type="submit"]{
+                background: $azul;
+                color: white;
+                max-width: 1000px;
+                margin: 10px 0;
+                padding: 7px 15px;
+                width: 30%;
+                border: none;
+            }
+            
+            button[type="submit"]:hover{
+                background: $azulHover;
+                cursor: pointer;
+            }
+        }
+
+        // Tabla de datos
+        table{
+            background: rgb(228, 245, 76);
+            margin: 30px auto;
+            width: 80%;
+        }
+
+        table thead tr th {
+            font-size: 16px;
+            padding: 10px 15px;
+        }
+        
+        table tbody tr td {
+            text-align: center;
+            padding: 10px 10px;
+            font-size: 14px;
+        }
+        
+        table tbody tr:nth-child(odd) {
+            background: white;
+        }
+    }
+
+    // Botones
+    button{
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        padding: 8px 10px;
+    }
+
+    .editar{
+        background: $verde;
+    }
+
+    .editar:hover{
+        background: green;
+    }
+
+    .eliminar:hover{
+        background: red;
+    }
+
+    .eliminar{
+        background: $rojo;
+    }
+}

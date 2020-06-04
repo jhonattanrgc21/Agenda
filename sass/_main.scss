@@ -33,6 +33,7 @@
     
             // Boton de envio
             button[type="submit"]{
+                border-radius: 5px;
                 background: $azul;
                 color: white;
                 max-width: 1000px;
@@ -50,7 +51,7 @@
 
         // Tabla de datos
         table{
-            background: rgb(228, 245, 76);
+            background: $amarillo;
             margin: 30px auto;
             width: 80%;
         }
@@ -62,7 +63,7 @@
         
         table tbody tr td {
             text-align: center;
-            padding: 10px 10px;
+            padding: 15px 10px;
             font-size: 14px;
         }
         
@@ -72,12 +73,12 @@
     }
 
     // Botones
-    button{
+    a{
         border: none;
         border-radius: 5px;
         color: white;
-        cursor: pointer;
         padding: 8px 10px;
+        text-decoration: none;
     }
 
     .editar{
@@ -94,5 +95,13 @@
 
     .eliminar{
         background: $rojo;
+    }
+
+    .volver{
+        color: orange;
+        font-size: 1.2em;
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
     }
 }

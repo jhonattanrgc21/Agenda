@@ -57,6 +57,7 @@ input:focus {
   margin-left: 5px;
 }
 .container main form button[type=submit] {
+  border-radius: 5px;
   background: #1668C4;
   color: white;
   max-width: 1000px;
@@ -80,18 +81,18 @@ input:focus {
 }
 .container main table tbody tr td {
   text-align: center;
-  padding: 10px 10px;
+  padding: 15px 10px;
   font-size: 14px;
 }
 .container main table tbody tr:nth-child(odd) {
   background: white;
 }
-.container button {
+.container a {
   border: none;
   border-radius: 5px;
   color: white;
-  cursor: pointer;
   padding: 8px 10px;
+  text-decoration: none;
 }
 .container .editar {
   background: #399e39;
@@ -104,6 +105,13 @@ input:focus {
 }
 .container .eliminar {
   background: #ec3e3e;
+}
+.container .volver {
+  color: orange;
+  font-size: 1.2em;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

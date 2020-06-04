@@ -20,16 +20,16 @@
 
         <main>
             <h2>Nuevo contacto</h2>
-            <form action="crear.php" method="post">
+            <form action="database/crear.php" method="post">
                 <div class="campo">
                     <label for="nombre">Nombre:
-                        <input type="text" id="nombre" autocomplete="off" required placeholder="Nombre...">
+                        <input type="text" id="nombre" name="nombre" autocomplete="off" required placeholder="Nombre...">
                     </label>
                 </div>
 
                 <div class="campo">
                     <label for="telefono">telefono:
-                        <input type="text" id="telefono" autocomplete="off" required placeholder="Telefono...">
+                        <input type="text" id="telefono" name="telefono" autocomplete="off" required placeholder="Telefono...">
                     </label>            
                 </div>
                 
@@ -37,43 +37,32 @@
             </form>
 
             <!--Tabla de contenido -->
+            <?php 
+                $query = 'SELECT * FROM contacto;';
+                $filas = $con->query($query);
+            ?>
+            <h2>Contactos existentes: <?php echo $filas->num_rows?></h2>
             <table>
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Nombre</th>
                         <th>Telefono</th>
                     </tr>
                 </thead>
 
                 <tbody>
+                    <?php while($resul = $filas->fetch_assoc()) {?>
                     <tr>
-                        <td>1</td>
-                        <td>Maria Barrios</td>
-                        <td>04244500514</td>
-                        <td><button class="editar">Editar</button></td>
-                        <td><button class="eliminar">Eliminar</button></td>
+                        <td><?php echo $resul['nombre']; ?></td>
+                        <td><?php echo $resul['telefono']; ?></td>
+                        <td><a href="database/editar.php?id=<?php echo $resul['id'];?>" class="editar">Editar</a></td>
+                        <td><a href="database/eliminar.php?id=<?php echo $resul['id'];?>" class="eliminar">Eliminar</a></td>
                     </tr>
-
-                    <tr>
-                        <td>1</td>
-                        <td>Jhonattan Garcia</td>
-                        <td>04144815755</td>
-                        <td><button class="editar">Editar</button></td>
-                        <td><button class="eliminar">Eliminar</button></td>
-                    </tr>
-
-                    <tr>
-                        <td>1</td>
-                        <td>William Garcia</td>
-                        <td>04144184415</td>
-                        <td><button class="editar">Editar</button></td>
-                        <td><button class="eliminar">Eliminar</button></td>
-                    </tr>
+                    <?php } ?>
                 </tbody>
             </table>
         </main>
     </div>
-    
+    <?php $con->close();?>
 </body>
 </html>
